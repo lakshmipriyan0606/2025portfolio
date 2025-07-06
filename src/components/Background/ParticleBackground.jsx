@@ -10,17 +10,11 @@ const ParticleBackground = () => {
     let animationFrameId;
     let particles = [];
 
-    const isDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-    // Light and dark mode colors
-    const particleColor = isDarkMode
-      ? "rgba(102, 126, 234,"
-      : "rgba(173, 216, 230,"; // dark blue vs light blue
-    const lineColor = isDarkMode
-      ? "rgba(102, 126, 234,"
-      : "rgba(135, 206, 250,"; // line color in each mode
+    const getColors = () => ({
+      particleColor: "rgba(102, 126, 234,",     // consistent dark mode particle color
+      lineColor: "rgba(102, 126, 234,",         // consistent dark mode line color
+      backgroundColor: "#0f172a",               // consistent dark background
+    });
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -38,45 +32,45 @@ const ParticleBackground = () => {
 
     const initParticles = () => {
       particles = [];
-      const particleCount = Math.floor((canvas.width * canvas.height) / 15000);
-      for (let i = 0; i < particleCount; i++) {
+      const count = Math.floor((canvas.width * canvas.height) / 15000);
+      for (let i = 0; i < count; i++) {
         particles.push(createParticle());
       }
     };
 
     const updateParticles = () => {
-      particles.forEach((particle) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+      particles.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
       });
     };
 
     const drawParticles = () => {
-      // Set background color
-      ctx.fillStyle = isDarkMode ? "#0f172a" : "#f0f9ff"; // dark slate vs soft blue
+      const { particleColor, lineColor, backgroundColor } = getColors();
+
+      // Background
+      ctx.fillStyle = backgroundColor;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Draw particles
-      particles.forEach((particle) => {
+      // Particles
+      particles.forEach((p) => {
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `${particleColor} ${particle.opacity})`;
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `${particleColor} ${p.opacity})`;
         ctx.fill();
       });
 
-      // Draw lines
-      particles.forEach((particle, i) => {
+      // Connecting Lines
+      particles.forEach((p, i) => {
         particles.slice(i + 1).forEach((other) => {
-          const dx = particle.x - other.x;
-          const dy = particle.y - other.y;
+          const dx = p.x - other.x;
+          const dy = p.y - other.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
           if (distance < 100) {
             ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
+            ctx.moveTo(p.x, p.y);
             ctx.lineTo(other.x, other.y);
             ctx.strokeStyle = `${lineColor} ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
@@ -112,7 +106,7 @@ const ParticleBackground = () => {
   return (
     <motion.canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
+      className="fixed inset-0 pointer-events-none z-0" 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
