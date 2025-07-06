@@ -151,7 +151,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed"
         >
           Passionate about creating exceptional digital experiences with modern
           web technologies. I transform ideas into interactive realities that
@@ -231,19 +231,13 @@ const HeroSection = () => {
               label: "LinkedIn",
               color: "hover:text-blue-400",
             },
-            {
-              icon: Mail,
-              href: "mailto:lakshmipriyan0606@gmail.com",
-              label: "Email",
-              color: "hover:text-cyan-400",
-            },
           ].map((social, index) => (
             <motion.a
               key={social.label}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full transition-all duration-300 text-gray-400 ${social.color}`}
+              className={`p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full transition-all duration-300 text-gray-200 ${social.color}`}
               whileHover={{ scale: 1.1, y: -3 }}
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, y: 20 }}

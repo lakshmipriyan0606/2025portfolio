@@ -94,7 +94,7 @@ const ExperienceSection = () => {
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
                 }
                 transition={{ delay: 0.4 }}
-                className="text-lg text-gray-400 dark:text-gray-300 max-w-3xl mx-auto"
+                className="text-lg text-gray-200 text-gray-300 max-w-3xl mx-auto"
               >
                 My professional journey through various roles and companies,
                 each contributing to my growth as a developer and shaping my
@@ -175,11 +175,11 @@ const ExperienceSection = () => {
                   </div>
                   <h4 className="font-bold text-lg mb-2">{edu.degree}</h4>
                   {edu.field && (
-                    <p className="text-purple-600 dark:text-purple-400 mb-2">
+                    <p className="text-purple-600 text-purple-400 mb-2">
                       {edu.field}
                     </p>
                   )}
-                  <p className="text-gray-400 dark:text-gray-300 text-sm mb-2">
+                  <p className="text-gray-200 text-gray-300 text-sm mb-2">
                     {edu.school}
                   </p>
                   <p className="text-gray-500 text-sm">{edu.year}</p>

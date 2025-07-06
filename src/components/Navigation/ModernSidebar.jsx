@@ -124,7 +124,7 @@ const ModernSidebar = () => {
             </div>
             <div>
               <h1 className="text-lg font-bold text-white">Lakshmi Priyan</h1>
-              <p className="text-xs text-gray-400">Web Developer</p>
+              <p className="text-xs text-gray-200">Web Developer</p>
             </div>
           </motion.div>
 
@@ -205,7 +205,7 @@ const ModernSidebar = () => {
             </motion.p>
             {/* Status */}
             <motion.div
-              className="flex items-center justify-center space-x-2 text-sm text-gray-400"
+              className="flex items-center justify-center space-x-2 text-sm text-gray-200"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -335,7 +335,7 @@ const ModernSidebar = () => {
                     Web Developer
                   </p>
 
-                  <div className="flex items-center justify-center space-x-2 text-sm text-gray-400">
+                  <div className="flex items-center justify-center space-x-2 text-sm text-gray-200">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span>Available for work</span>
                   </div>

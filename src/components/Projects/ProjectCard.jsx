@@ -49,14 +49,14 @@ const ProjectCard = ({ project, index, isInView }) => {
         {/* Project Content */}
         <div className="p-6">
           <div className="flex items-center justify-between mb-3">
-            <span className="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full">
+            <span className="px-3 py-1 text-xs font-medium bg-purple-100 bg-purple-900/30 text-purple-600 text-purple-400 rounded-full">
               {project.category}
             </span>
             <motion.a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-purple-600 transition-colors duration-200"
+              className="text-gray-200 hover:text-purple-600 transition-colors duration-200"
               whileHover={{ scale: 1.1 }}
             >
               <ExternalLink className="w-4 h-4" />
@@ -67,7 +67,7 @@ const ProjectCard = ({ project, index, isInView }) => {
             {project.title}
           </h3>
           
-          <p className="text-gray-400 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+          <p className="text-gray-200 text-gray-300 text-sm mb-4 leading-relaxed">
             {project.description}
           </p>
 
@@ -79,7 +79,7 @@ const ProjectCard = ({ project, index, isInView }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                 transition={{ delay: 0.8 + index * 0.1 + techIndex * 0.05 }}
-                className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-300 rounded-md"
+                className="px-2 py-1 text-xs bg-gray-100 bg-gray-800 text-gray-200 text-gray-300 rounded-md"
               >
                 {tech}
               </motion.span>

@@ -97,7 +97,7 @@ const Navigation = () => {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold gradient-text">Lakshmi Priyan</h1>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Frontend Developer</p>
+                <p className="text-xs text-gray-500 text-gray-200">Frontend Developer</p>
               </div>
             </motion.div>
 
@@ -163,7 +163,7 @@ const Navigation = () => {
                       exit={{ rotate: -90, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <Menu size={20} className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400" />
+                      <Menu size={20} className="text-gray-700 text-gray-300 group-hover:text-purple-600 group-hover:text-purple-400" />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -198,24 +198,24 @@ const Navigation = () => {
 
             {/* Sidebar */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-80 sm:w-96 glass-effect border-l border-white/20 dark:border-gray-700/50 z-50 overflow-hidden"
+              className="fixed top-0 right-0 h-full w-80 sm:w-96 glass-effect border-l border-white/20 border-gray-700/50 z-50 overflow-hidden"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
               {/* Sidebar Header */}
-              <div className="p-6 border-b border-white/10 dark:border-gray-700/50">
+              <div className="p-6 border-b border-white/10 border-gray-700/50">
                 <div className="flex items-center justify-between">
                   <div>
                     <h2 className="text-xl font-bold gradient-text">Navigation</h2>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    <p className="text-sm text-gray-500 text-gray-200 mt-1">
                       Explore my portfolio
                     </p>
                   </div>
                   <motion.button
                     onClick={() => setIsSidebarOpen(false)}
-                    className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    className="p-2 rounded-lg hover:bg-gray-100 hover:bg-gray-800 transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -236,7 +236,7 @@ const Navigation = () => {
                       className={`w-full group relative flex items-center justify-between p-4 rounded-xl transition-all duration-300 ${
                         isActive
                           ? 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30'
-                          : 'hover:bg-gray-100/50 dark:hover:bg-gray-800/50'
+                          : 'hover:bg-gray-100/50 hover:bg-gray-800/50'
                       }`}
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -248,15 +248,15 @@ const Navigation = () => {
                         <div className={`p-2 rounded-lg transition-all duration-300 ${
                           isActive
                             ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg'
-                            : 'bg-gray-100 dark:bg-gray-800 group-hover:bg-purple-100 dark:group-hover:bg-purple-900/30'
+                            : 'bg-gray-100 bg-gray-800 group-hover:bg-purple-100 group-hover:bg-purple-900/30'
                         }`}>
                           <item.icon size={18} />
                         </div>
                         <div className="text-left">
                           <span className={`font-medium transition-colors ${
                             isActive
-                              ? 'text-purple-600 dark:text-purple-400'
-                              : 'text-gray-700 dark:text-gray-300'
+                              ? 'text-purple-600 text-purple-400'
+                              : 'text-gray-700 text-gray-300'
                           }`}>
                             {item.name}
                           </span>
@@ -265,7 +265,7 @@ const Navigation = () => {
                       
                       <motion.div
                         className={`transition-all duration-300 ${
-                          isActive ? 'text-purple-500' : 'text-gray-400 group-hover:text-purple-500'
+                          isActive ? 'text-purple-500' : 'text-gray-200 group-hover:text-purple-500'
                         }`}
                         animate={{ x: isActive ? 0 : -10 }}
                       >
@@ -288,22 +288,22 @@ const Navigation = () => {
               </div>
 
               {/* Sidebar Footer */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10 dark:border-gray-700/50">
+              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10 border-gray-700/50">
                 <div className="space-y-4">
                   {/* Settings Button */}
                   <motion.button
-                    className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors group"
+                    className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100/50 hover:bg-gray-800/50 transition-colors group"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <Settings size={18} className="text-gray-500 group-hover:text-purple-500 transition-colors" />
-                    <span className="text-sm text-gray-400 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-400">
+                    <span className="text-sm text-gray-200 text-gray-200 group-hover:text-gray-200 group-hover:text-gray-200">
                       Settings
                     </span>
                   </motion.button>
 
                   {/* Status Indicator */}
-                  <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center space-x-2 text-xs text-gray-500 text-gray-200">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     <span>Available for work</span>
                   </div>
@@ -331,7 +331,7 @@ const Navigation = () => {
                 className={`group relative block w-3 h-3 rounded-full transition-all duration-300 ${
                   isActive
                     ? 'bg-gradient-to-r from-purple-500 to-blue-500 scale-125'
-                    : 'bg-gray-300 dark:bg-gray-400 hover:bg-purple-400 dark:hover:bg-purple-500'
+                    : 'bg-gray-300 bg-gray-400 hover:bg-purple-400 hover:bg-purple-500'
                 }`}
                 whileHover={{ scale: 1.5 }}
                 whileTap={{ scale: 0.9 }}
@@ -339,7 +339,7 @@ const Navigation = () => {
               >
                 {/* Tooltip */}
                 <div className="absolute right-6 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                  <div className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-xs px-2 py-1 rounded whitespace-nowrap">
+                  <div className="bg-gray-900 bg-gray-100 text-white text-gray-900 text-xs px-2 py-1 rounded whitespace-nowrap">
                     {item.name}
                   </div>
                 </div>

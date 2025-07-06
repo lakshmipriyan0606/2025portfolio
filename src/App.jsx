@@ -27,7 +27,7 @@ function App() {
 
   const LoadingScreen = () => {
     const [displayedText, setDisplayedText] = useState("");
-    const fullText = "Loading Portfolio...";
+    const fullText = "Looading Portfolio...";
 
     useEffect(() => {
       let i = 0;

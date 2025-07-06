@@ -185,8 +185,8 @@ const ContactForm = ({ isInView }) => {
             exit={{ opacity: 0, y: -20 }}
             className={`flex items-center space-x-2 p-4 rounded-xl ${
               submitStatus === 'success'
-                ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400'
-                : 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400'
+                ? 'bg-green-100 bg-green-900/30 text-green-600 text-green-400'
+                : 'bg-red-100 bg-red-900/30 text-red-600 text-red-400'
             }`}
           >
             {submitStatus === 'success' ? (

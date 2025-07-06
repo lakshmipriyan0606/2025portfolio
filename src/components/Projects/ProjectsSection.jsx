@@ -153,7 +153,7 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-gray-400 dark:text-gray-300 max-w-3xl mx-auto"
+              className="text-lg text-gray-200 text-gray-300 max-w-3xl mx-auto"
             >
               A showcase of my latest work, featuring modern web applications
               and websites built with cutting-edge technologies and innovative

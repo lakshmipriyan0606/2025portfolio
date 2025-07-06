@@ -12,16 +12,16 @@ const SkillCard = ({ skill, delay, isInView }) => {
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center space-x-3">
           <span className="text-2xl">{skill.icon}</span>
-          <span className="font-medium text-gray-800 dark:text-gray-400">
+          <span className="font-medium text-gray-200 text-gray-200">
             {skill.name}
           </span>
         </div>
-        <span className="text-sm font-bold text-purple-600 dark:text-purple-400">
+        <span className="text-sm font-bold text-purple-600 text-purple-400">
           {skill.level}%
         </span>
       </div>
       
-      <div className="relative h-2 bg-gray-400 dark:bg-gray-700 rounded-full overflow-hidden">
+      <div className="relative h-2 bg-gray-400 bg-gray-700 rounded-full overflow-hidden">
         <motion.div
           className="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
           initial={{ width: 0 }}

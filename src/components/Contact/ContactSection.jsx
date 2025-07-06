@@ -33,7 +33,7 @@ const ContactSection = () => {
       icon: Github,
       label: "GitHub",
       href: "https://github.com/lakshmipriyan0606",
-      color: "hover:text-gray-800 dark:hover:text-white"
+      color: "hover:text-gray-200 hover:text-white"
     },
     {
       icon: Linkedin,
@@ -74,7 +74,7 @@ const ContactSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-gray-400 dark:text-gray-300 max-w-3xl mx-auto"
+              className="text-lg text-gray-200 text-gray-300 max-w-3xl mx-auto"
             >
               Ready to bring your ideas to life? I'm always excited to work on new projects 
               and collaborate with amazing people. Let's create something extraordinary together!
@@ -106,8 +106,8 @@ const ContactSection = () => {
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">{info.label}</p>
-                        <p className="font-semibold text-gray-800 dark:text-gray-400">{info.value}</p>
+                        <p className="text-sm text-gray-500 text-gray-200">{info.label}</p>
+                        <p className="font-semibold text-gray-200 text-gray-200">{info.value}</p>
                       </div>
                     </motion.a>
                   ))}
@@ -150,9 +150,9 @@ const ContactSection = () => {
               >
                 <div className="flex items-center space-x-3 mb-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="font-semibold text-green-600 dark:text-green-400">Available for Work</span>
+                  <span className="font-semibold text-green-600 text-green-400">Available for Work</span>
                 </div>
-                <p className="text-gray-400 dark:text-gray-300 text-sm">
+                <p className="text-gray-200 text-gray-300 text-sm">
                   I'm currently available for freelance projects and full-time opportunities. 
                   Let's discuss how we can work together!
                 </p>

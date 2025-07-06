@@ -132,7 +132,7 @@ const CompactSidebar = () => {
             {/* Active Section Indicator */}
             {!isExpanded && (
               <motion.div
-                className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-2 border-white dark:border-gray-900"
+                className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-2 border-white border-gray-900"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 1 }}
@@ -161,7 +161,7 @@ const CompactSidebar = () => {
                     Quick Navigation
                   </motion.h3>
                   <motion.p
-                    className="text-xs text-gray-500 dark:text-gray-400"
+                    className="text-xs text-gray-500 text-gray-200"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
@@ -182,7 +182,7 @@ const CompactSidebar = () => {
                         className={`w-full group relative flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 ${
                           isActive
                             ? 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30'
-                            : 'hover:bg-gray-100/50 dark:hover:bg-gray-800/50'
+                            : 'hover:bg-gray-100/50 hover:bg-gray-800/50'
                         }`}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -194,7 +194,7 @@ const CompactSidebar = () => {
                         <div className={`p-2 rounded-lg transition-all duration-300 ${
                           isActive
                             ? `bg-gradient-to-r ${item.color} text-white shadow-lg`
-                            : 'bg-gray-100 dark:bg-gray-800 group-hover:bg-purple-100 dark:group-hover:bg-purple-900/30'
+                            : 'bg-gray-100 bg-gray-800 group-hover:bg-purple-100 group-hover:bg-purple-900/30'
                         }`}>
                           <item.icon size={14} />
                         </div>
@@ -202,8 +202,8 @@ const CompactSidebar = () => {
                         {/* Label */}
                         <span className={`text-sm font-medium transition-colors flex-1 text-left ${
                           isActive
-                            ? 'text-purple-600 dark:text-purple-400'
-                            : 'text-gray-700 dark:text-gray-300'
+                            ? 'text-purple-600 text-purple-400'
+                            : 'text-gray-700 text-gray-300'
                         }`}>
                           {item.name}
                         </span>
@@ -211,7 +211,7 @@ const CompactSidebar = () => {
                         {/* Arrow */}
                         <motion.div
                           className={`transition-all duration-300 ${
-                            isActive ? 'text-purple-500' : 'text-gray-400 group-hover:text-purple-500'
+                            isActive ? 'text-purple-500' : 'text-gray-200 group-hover:text-purple-500'
                           }`}
                           animate={{ x: isActive ? 0 : -5 }}
                         >
@@ -234,9 +234,9 @@ const CompactSidebar = () => {
                 </div>
 
                 {/* Quick Actions */}
-                <div className="border-t border-white/10 dark:border-gray-700/50 pt-4 space-y-2">
+                <div className="border-t border-white/10 border-gray-700/50 pt-4 space-y-2">
                   <motion.h4
-                    className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3"
+                    className="text-xs font-semibold text-gray-500 text-gray-200 uppercase tracking-wider mb-3"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
@@ -248,7 +248,7 @@ const CompactSidebar = () => {
                     <motion.button
                       key={action.name}
                       onClick={action.action}
-                      className="w-full flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors group"
+                      className="w-full flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100/50 hover:bg-gray-800/50 transition-colors group"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 + index * 0.05 }}
@@ -256,7 +256,7 @@ const CompactSidebar = () => {
                       whileTap={{ scale: 0.98 }}
                     >
                       <action.icon size={14} className="text-gray-500 group-hover:text-purple-500 transition-colors" />
-                      <span className="text-xs text-gray-400 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-400">
+                      <span className="text-xs text-gray-200 text-gray-200 group-hover:text-gray-200 group-hover:text-gray-200">
                         {action.name}
                       </span>
                     </motion.button>
@@ -264,10 +264,10 @@ const CompactSidebar = () => {
                 </div>
 
                 {/* Theme Toggle */}
-                <div className="border-t border-white/10 dark:border-gray-700/50 pt-4 mt-4">
+                <div className="border-t border-white/10 border-gray-700/50 pt-4 mt-4">
                   <motion.button
                     onClick={toggleTheme}
-                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors group"
+                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-100/50 hover:bg-gray-800/50 transition-colors group"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
@@ -278,11 +278,11 @@ const CompactSidebar = () => {
                       <div className="p-2 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-white">
                         {isDark ? <Sun size={14} /> : <Moon size={14} />}
                       </div>
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <span className="text-sm font-medium text-gray-700 text-gray-300">
                         {isDark ? 'Light Mode' : 'Dark Mode'}
                       </span>
                     </div>
-                    <div className="w-8 h-4 bg-gray-400 dark:bg-gray-700 rounded-full relative transition-colors">
+                    <div className="w-8 h-4 bg-gray-400 bg-gray-700 rounded-full relative transition-colors">
                       <motion.div
                         className="w-3 h-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full absolute top-0.5"
                         animate={{ x: isDark ? 18 : 2 }}
@@ -294,7 +294,7 @@ const CompactSidebar = () => {
 
                 {/* Status */}
                 <motion.div
-                  className="mt-4 flex items-center justify-center space-x-2 text-xs text-gray-500 dark:text-gray-400"
+                  className="mt-4 flex items-center justify-center space-x-2 text-xs text-gray-500 text-gray-200"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.7 }}
@@ -324,7 +324,7 @@ const CompactSidebar = () => {
                     className={`w-1 h-6 rounded-full transition-all duration-300 ${
                       isActive
                         ? `bg-gradient-to-b ${item.color} shadow-lg`
-                        : 'bg-gray-300 dark:bg-gray-400'
+                        : 'bg-gray-300 bg-gray-400'
                     }`}
                     animate={{ scale: isActive ? 1.2 : 1 }}
                     transition={{ duration: 0.3 }}

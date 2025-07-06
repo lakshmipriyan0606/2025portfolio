@@ -13,7 +13,7 @@ const ExperienceCard = ({ experience, index, isInView }) => {
       className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}
     >
       {/* Timeline Dot */}
-      <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full border-4 border-white dark:border-gray-900 z-10">
+      <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full border-4 border-white border-gray-900 z-10">
         {experience.isLatest && (
           <motion.div
             className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
@@ -33,7 +33,7 @@ const ExperienceCard = ({ experience, index, isInView }) => {
           <div className="flex items-start justify-between mb-4">
             <div>
               <h3 className="text-xl font-bold mb-1 gradient-text">{experience.position}</h3>
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-400 mb-2">
+              <h4 className="text-lg font-semibold text-gray-200 text-gray-200 mb-2">
                 {experience.company}
               </h4>
             </div>
@@ -50,19 +50,19 @@ const ExperienceCard = ({ experience, index, isInView }) => {
           </div>
 
           {/* Period */}
-          <div className="flex items-center text-gray-400 dark:text-gray-400 mb-4">
+          <div className="flex items-center text-gray-200 text-gray-200 mb-4">
             <Calendar className="w-4 h-4 mr-2" />
             <span className="text-sm">{experience.period}</span>
           </div>
 
           {/* Description */}
-          <p className="text-gray-400 dark:text-gray-300 mb-6 leading-relaxed">
+          <p className="text-gray-200 text-gray-300 mb-6 leading-relaxed">
             {experience.description}
           </p>
 
           {/* Technologies */}
           <div className="space-y-2">
-            <h5 className="text-sm font-semibold text-gray-800 dark:text-gray-400">Technologies Used:</h5>
+            <h5 className="text-sm font-semibold text-gray-200 text-gray-200">Technologies Used:</h5>
             <div className="flex flex-wrap gap-2">
               {experience.technologies.map((tech, techIndex) => (
                 <motion.span
@@ -70,7 +70,7 @@ const ExperienceCard = ({ experience, index, isInView }) => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                   transition={{ delay: 0.7 + index * 0.2 + techIndex * 0.05 }}
-                  className="px-3 py-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full font-medium"
+                  className="px-3 py-1 text-xs bg-purple-100 bg-purple-900/30 text-purple-600 text-purple-400 rounded-full font-medium"
                   whileHover={{ scale: 1.05 }}
                 >
                   {tech}

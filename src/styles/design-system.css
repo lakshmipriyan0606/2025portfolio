@@ -150,13 +150,6 @@
   --glow-cyan: 0 0 20px var(--cyber-cyan-400), 0 0 40px var(--cyber-cyan-500), 0 0 60px var(--cyber-cyan-600);
   --glow-blue: 0 0 20px var(--electric-blue-400), 0 0 40px var(--electric-blue-500), 0 0 60px var(--electric-blue-600);
   --glow-purple: 0 0 20px var(--neon-purple-400), 0 0 40px var(--neon-purple-500), 0 0 60px var(--neon-purple-600);
-
-  /* === GRADIENTS === */
-  --gradient-primary: linear-gradient(135deg, var(--cyber-cyan-400) 0%, var(--electric-blue-500) 50%, var(--neon-purple-600) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--electric-blue-400) 0%, var(--cyber-cyan-500) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--neon-purple-400) 0%, var(--electric-blue-500) 100%);
-  --gradient-dark: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 /* ===== BASE TYPOGRAPHY CLASSES ===== */

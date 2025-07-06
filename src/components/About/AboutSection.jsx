@@ -86,7 +86,7 @@ const AboutSection = () => {
                     <div className="text-2xl font-bold gradient-text">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-gray-400 dark:text-gray-400">
+                    <div className="text-sm text-gray-200 text-gray-200">
                       {stat.label}
                     </div>
                   </motion.div>
@@ -108,7 +108,7 @@ const AboutSection = () => {
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
                   }
                   transition={{ delay: 0.6 }}
-                  className="text-lg text-gray-400 dark:text-gray-300 leading-relaxed"
+                  className="text-lg text-gray-200 text-gray-300 leading-relaxed"
                 >
                   I'm a passionate frontend developer with a strong command of
                   modern web technologies. My journey in web development is
@@ -122,7 +122,7 @@ const AboutSection = () => {
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
                   }
                   transition={{ delay: 0.7 }}
-                  className="text-lg text-gray-400 dark:text-gray-300 leading-relaxed"
+                  className="text-lg text-gray-200 text-gray-300 leading-relaxed"
                 >
                   With a keen eye for detail and a love for staying up-to-date
                   with the latest technologies, I'm driven to create exceptional

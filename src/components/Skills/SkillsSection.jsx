@@ -70,7 +70,7 @@ const SkillsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-gray-400 dark:text-gray-300 max-w-3xl mx-auto"
+              className="text-lg text-gray-200 text-gray-300 max-w-3xl mx-auto"
             >
               A comprehensive toolkit of modern technologies and frameworks that enable me to build 
               exceptional digital experiences from concept to deployment.
@@ -113,7 +113,7 @@ const SkillsSection = () => {
           >
             <div className="glass-effect rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4 gradient-text">Always Learning</h3>
-              <p className="text-gray-400 dark:text-gray-300 leading-relaxed">
+              <p className="text-gray-200 text-gray-300 leading-relaxed">
                 Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, 
                 tools, and methodologies to stay at the forefront of web development. My passion 
                 for learning ensures that I can tackle any challenge with the most effective and 
