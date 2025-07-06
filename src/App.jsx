@@ -25,36 +25,57 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const LoadingScreen = () => (
-    <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{ background: "var(--gradient-dark)" }}
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="text-center">
-        <motion.div
-          className="w-20 h-20 border-4 border-t-transparent rounded-full mx-auto mb-4"
-          style={{
-            borderColor: "var(--cyber-cyan-400)",
-            borderTopColor: "transparent",
-          }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.h2
-          className="heading-4 gradient-text-primary"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
-          Loading Portfolio...
-        </motion.h2>
-      </div>
-    </motion.div>
-  );
+  const LoadingScreen = () => {
+    const [displayedText, setDisplayedText] = useState("");
+    const fullText = "Loading Portfolio...";
 
+    useEffect(() => {
+      let i = 0;
+      const interval = setInterval(() => {
+        setDisplayedText((prev) => prev + fullText.charAt(i));
+        i++;
+        if (i === fullText.length) clearInterval(interval);
+      }, 100);
+      return () => clearInterval(interval);
+    }, []);
+
+    return (
+      <motion.div
+        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white"
+        initial={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        {/* Ripple animation */}
+        <div className="relative w-24 h-24 mb-6">
+          {[...Array(3)].map((_, i) => (
+            <motion.span
+              key={i}
+              className="absolute inset-0 rounded-full border-4 border-cyan-400"
+              animate={{ scale: [0, 1.4], opacity: [1, 0] }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                delay: i * 0.4,
+                ease: "easeOut",
+              }}
+            />
+          ))}
+          <div className="absolute inset-4 bg-cyan-400 rounded-full blur-sm opacity-60" />
+        </div>
+
+        {/* Typewriter text */}
+        <motion.h2
+          className="text-xl font-mono tracking-wide"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
+          {displayedText}
+        </motion.h2>
+      </motion.div>
+    );
+  };
   return (
     <ThemeProvider>
       <div
