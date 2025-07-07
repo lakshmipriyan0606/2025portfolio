@@ -47,7 +47,7 @@ const ContactForm = ({ isInView }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ delay: 0.7 }}
-        className="text-2xl font-bold mb-6 gradient-text"
+        className="text-2xl font-bold mb-6 text-gray-300"
       >
         Send Me a Message
       </motion.h3>

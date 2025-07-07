@@ -20,9 +20,9 @@ const DesignShowcase = () => {
   ];
 
   const gradientExamples = [
-    { name: 'Primary Gradient', class: 'gradient-text-primary', text: 'Cyber Cyan → Electric Blue → Neon Purple' },
-    { name: 'Secondary Gradient', class: 'gradient-text-secondary', text: 'Electric Blue → Cyber Cyan' },
-    { name: 'Accent Gradient', class: 'gradient-text-accent', text: 'Neon Purple → Electric Blue' }
+    { name: 'Primary Gradient', class: 'text-gray-300-primary', text: 'Cyber Cyan → Electric Blue → Neon Purple' },
+    { name: 'Secondary Gradient', class: 'text-gray-300-secondary', text: 'Electric Blue → Cyber Cyan' },
+    { name: 'Accent Gradient', class: 'text-gray-300-accent', text: 'Neon Purple → Electric Blue' }
   ];
 
   return (
@@ -37,7 +37,7 @@ const DesignShowcase = () => {
         >
           <div className="flex items-center justify-center space-x-3 mb-6">
             <Palette className="w-8 h-8 text-cyan-400" />
-            <h1 className="heading-1 gradient-text-primary">Modern Design System</h1>
+            <h1 className="heading-1 text-gray-300-primary">Modern Design System</h1>
             <Sparkles className="w-8 h-8 text-purple-400" />
           </div>
           <p className="body-large text-neutral-400 max-w-3xl mx-auto">
@@ -55,7 +55,7 @@ const DesignShowcase = () => {
         >
           <div className="flex items-center space-x-3 mb-8">
             <Eye className="w-6 h-6 text-cyan-400" />
-            <h2 className="heading-3 gradient-text-secondary">Color Palette</h2>
+            <h2 className="heading-3 text-gray-300-secondary">Color Palette</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -93,7 +93,7 @@ const DesignShowcase = () => {
         >
           <div className="flex items-center space-x-3 mb-8">
             <Type className="w-6 h-6 text-purple-400" />
-            <h2 className="heading-3 gradient-text-accent">Typography System</h2>
+            <h2 className="heading-3 text-gray-300-accent">Typography System</h2>
           </div>
           
           <div className="glass-morphism-dark rounded-2xl p-8">
@@ -126,7 +126,7 @@ const DesignShowcase = () => {
         >
           <div className="flex items-center space-x-3 mb-8">
             <Zap className="w-6 h-6 text-yellow-400" />
-            <h2 className="heading-3 gradient-text-primary">Gradient Text Effects</h2>
+            <h2 className="heading-3 text-gray-300-primary">Gradient Text Effects</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -158,7 +158,7 @@ const DesignShowcase = () => {
         >
           <div className="flex items-center space-x-3 mb-8">
             <Code className="w-6 h-6 text-green-400" />
-            <h2 className="heading-3 gradient-text-secondary">Interactive Components</h2>
+            <h2 className="heading-3 text-gray-300-secondary">Interactive Components</h2>
           </div>
           
           <div className="glass-morphism-dark rounded-2xl p-8">
@@ -191,7 +191,7 @@ const DesignShowcase = () => {
                   className="card-modern"
                   whileHover={{ y: -5 }}
                 >
-                  <h4 className="heading-6 gradient-text-primary mb-2">Modern Card</h4>
+                  <h4 className="heading-6 text-gray-300-primary mb-2">Modern Card</h4>
                   <p className="body-small text-neutral-400">
                     Glass morphism effect with hover animations and gradient borders.
                   </p>
@@ -207,7 +207,7 @@ const DesignShowcase = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <h2 className="heading-3 gradient-text-accent mb-8 text-center">Implementation Guidelines</h2>
+          <h2 className="heading-3 text-gray-300-accent mb-8 text-center">Implementation Guidelines</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
             <div className="glass-morphism-dark rounded-2xl p-6">

@@ -66,7 +66,7 @@ const ContactSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl font-bold gradient-text mb-6"
+              className="text-4xl md:text-5xl font-bold text-gray-300 mb-6"
             >
               Let's Work Together
             </motion.h2>
@@ -90,7 +90,7 @@ const ContactSection = () => {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold mb-6 gradient-text">Contact Information</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-300">Contact Information</h3>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <motion.a
@@ -120,7 +120,7 @@ const ContactSection = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.9 }}
               >
-                <h4 className="text-xl font-bold mb-4 gradient-text">Follow Me</h4>
+                <h4 className="text-xl font-bold mb-4 text-gray-300">Follow Me</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <motion.a

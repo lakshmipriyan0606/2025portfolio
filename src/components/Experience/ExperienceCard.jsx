@@ -32,8 +32,8 @@ const ExperienceCard = ({ experience, index, isInView }) => {
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div>
-              <h3 className="text-xl font-bold mb-1 gradient-text">{experience.position}</h3>
-              <h4 className="text-lg font-semibold text-gray-200 text-gray-200 mb-2">
+              <h3 className="text-xl font-bold mb-1 text-gray-300">{experience.position}</h3>
+              <h4 className="text-lg font-semibold text-gray-200 mb-2">
                 {experience.company}
               </h4>
             </div>
@@ -50,19 +50,19 @@ const ExperienceCard = ({ experience, index, isInView }) => {
           </div>
 
           {/* Period */}
-          <div className="flex items-center text-gray-200 text-gray-200 mb-4">
+          <div className="flex items-center  text-gray-200 mb-4">
             <Calendar className="w-4 h-4 mr-2" />
             <span className="text-sm">{experience.period}</span>
           </div>
 
           {/* Description */}
-          <p className="text-gray-200 text-gray-300 mb-6 leading-relaxed">
+          <p className=" text-gray-400 mb-6 leading-relaxed">
             {experience.description}
           </p>
 
           {/* Technologies */}
           <div className="space-y-2">
-            <h5 className="text-sm font-semibold text-gray-200 text-gray-200">Technologies Used:</h5>
+            <h5 className="text-sm font-semibold text-gray-200">Technologies Used:</h5>
             <div className="flex flex-wrap gap-2">
               {experience.technologies.map((tech, techIndex) => (
                 <motion.span

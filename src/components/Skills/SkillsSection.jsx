@@ -62,7 +62,7 @@ const SkillsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl font-bold gradient-text mb-6"
+              className="text-4xl md:text-5xl font-bold text-gray-300 mb-6"
             >
               Technical Skills
             </motion.h2>
@@ -78,7 +78,7 @@ const SkillsSection = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.title}
@@ -87,7 +87,7 @@ const SkillsSection = () => {
                 transition={{ delay: 0.5 + categoryIndex * 0.2, duration: 0.8 }}
                 className="glass-effect rounded-3xl p-8 hover:glow-effect transition-all duration-300"
               >
-                <h3 className="text-xl font-bold mb-6 text-center gradient-text">
+                <h3 className="text-xl font-bold mb-6 text-center text-gray-300">
                   {category.title}
                 </h3>
                 <div className="space-y-6">
@@ -112,7 +112,7 @@ const SkillsSection = () => {
             className="mt-16 text-center"
           >
             <div className="glass-effect rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4 gradient-text">Always Learning</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-300">Always Learning</h3>
               <p className="text-gray-200 text-gray-300 leading-relaxed">
                 Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, 
                 tools, and methodologies to stay at the forefront of web development. My passion 

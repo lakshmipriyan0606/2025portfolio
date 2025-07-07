@@ -41,7 +41,7 @@ const ExperienceSection = () => {
       period: "Nov 2023 - Dec 2023",
       description:
         "Worked in a dynamic environment, honing skills in React and Tailwind CSS for frontend development. On the backend, worked with Node.js and Express, utilizing SQL databases to optimize data handling.",
-      technologies: ["React", "Node.js", "Express", "SQL", "Tailwind CSS"],
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
       isLatest: false,
     },
     {
@@ -84,7 +84,7 @@ const ExperienceSection = () => {
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
                 }
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-5xl font-bold gradient-text mb-6"
+                className="text-4xl md:text-5xl font-bold text-gray-300 mb-6"
               >
                 Work Experience
               </motion.h2>
@@ -130,7 +130,7 @@ const ExperienceSection = () => {
           transition={{ delay: 1 }}
           className="mt-20"
         >
-          <h3 className="text-3xl font-bold text-center gradient-text mb-12">
+          <h3 className="text-3xl font-bold text-center text-gray-300 mb-12">
             Education
           </h3>
           <div className="grid md:grid-cols-3 gap-8">

@@ -96,7 +96,7 @@ const Navigation = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-500 rounded-xl blur opacity-30 animate-pulse"></div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold gradient-text">Lakshmi Priyan</h1>
+                <h1 className="text-xl font-bold text-gray-300">Lakshmi Priyan</h1>
                 <p className="text-xs text-gray-500 text-gray-200">Frontend Developer</p>
               </div>
             </motion.div>
@@ -208,7 +208,7 @@ const Navigation = () => {
               <div className="p-6 border-b border-white/10 border-gray-700/50">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-xl font-bold gradient-text">Navigation</h2>
+                    <h2 className="text-xl font-bold text-gray-300">Navigation</h2>
                     <p className="text-sm text-gray-500 text-gray-200 mt-1">
                       Explore my portfolio
                     </p>

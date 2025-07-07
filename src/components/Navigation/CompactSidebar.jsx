@@ -153,7 +153,7 @@ const CompactSidebar = () => {
                 {/* Header */}
                 <div className="mb-6">
                   <motion.h3
-                    className="text-lg font-bold gradient-text mb-1"
+                    className="text-lg font-bold text-gray-300 mb-1"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 }}
